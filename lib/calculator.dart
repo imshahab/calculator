@@ -133,6 +133,21 @@ class _CalculatorState extends State<Calculator> {
     } else if (input == "=") {
       userInput = calculate();
       result = calculate();
+    } else if (userInput == result) {
+      if (input == "1" ||
+          input == "2" ||
+          input == "3" ||
+          input == "4" ||
+          input == "5" ||
+          input == "6" ||
+          input == "7" ||
+          input == "8" ||
+          input == "9" ||
+          input == ".") {
+        userInput = input;
+      } else {
+        userInput = userInput + input;
+      }
     } else {
       userInput = userInput + input;
     }
